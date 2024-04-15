@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master # 触发工作流的分支
+      - main # 触发工作流的分支
 
 jobs:
   build:
