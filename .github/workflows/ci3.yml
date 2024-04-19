@@ -36,7 +36,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             # 将默认分支设置为 latest 版本
-            type=raw,value=latest-{{sha}},enable={{is_default_branch}}
+            type=raw,value=latest,enable={{is_default_branch}}
             type=schedule,pattern={{date 'YYYYMMDD-hhmmss' tz='Asia/Tokyo'}}
             type=sha,format=short
       -
