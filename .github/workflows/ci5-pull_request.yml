@@ -1,0 +1,17 @@
+# 
+# pull_request 事件触发
+#
+
+name: demo-pull_request
+
+on: pull_request
+
+
+jobs:
+  push_to_registry:
+    runs-on: ubuntu-latest
+    steps:
+      -run:  |
+        echo "Hello, world!"
+        echo "This is a pull request event."
+        
