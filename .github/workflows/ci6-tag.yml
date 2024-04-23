@@ -1,0 +1,19 @@
+# 
+# 使用 tag 事件触发工作流
+#
+
+name: demo-tag
+
+on: 
+  push:
+    tags:
+      - 'v*.*.*'
+
+
+jobs:
+  push_to_registry:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'This is a tag event.'
+        
